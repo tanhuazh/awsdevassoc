@@ -1,10 +1,13 @@
 var AWS = require('aws-sdk');
 
-AWS.config.loadFromPath('./config.json');
+// use environment variables
+// aws_access_key_id
+// aws_secret_access_key
+// AWS.config.loadFromPath('./config.json');
 
 var s3 = new AWS.S3();
 
-const BUCKET = "roletest"
+const BUCKET = "michael-roletest"
 const KEY = "file.txt"
 
 var params = {
