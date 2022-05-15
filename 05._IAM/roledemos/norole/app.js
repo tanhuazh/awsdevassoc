@@ -5,7 +5,9 @@ var AWS = require('aws-sdk');
 // aws_secret_access_key
 // AWS.config.loadFromPath('./config.json');
 
-var s3 = new AWS.S3();
+var s3 = new AWS.S3({
+  sslEnabled: false,
+});
 
 const BUCKET = "michael-roletest"
 const KEY = "file.txt"
